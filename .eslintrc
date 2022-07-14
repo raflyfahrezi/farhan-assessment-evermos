@@ -1,0 +1,23 @@
+{
+    "extends": ["next/core-web-vitals", "airbnb", "prettier"],
+    "rules": {
+        "arrow-body-style": "off",
+        "import/no-unresolved": "off",
+        "react-hooks/rules-of-hooks": "off",
+        "react-hooks/exhaustive-deps": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react/jsx-filename-extension": "off",
+        "import/prefer-default-export": "off",
+        "import/no-extraneous-dependencies": "off",
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "js": "never",
+                "jsx": "never",
+                "ts": "never",
+                "tsx": "never"
+            }
+        ]
+    }
+}
