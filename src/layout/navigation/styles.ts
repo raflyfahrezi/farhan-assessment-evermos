@@ -9,6 +9,8 @@ export const sNavigation = css`
 
     top: 0;
     left: 0;
+
+    z-index: 10;
 `
 
 export const sNavigationWrapper = css`
