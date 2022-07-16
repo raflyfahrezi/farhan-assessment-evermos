@@ -241,6 +241,16 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/frank-ruhl-libre@^4.5.7":
+  version "4.5.7"
+  resolved "https://registry.yarnpkg.com/@fontsource/frank-ruhl-libre/-/frank-ruhl-libre-4.5.7.tgz#395d95eba14155d6eb190bd53ff2d3d55f29c8ec"
+  integrity sha512-CnZ+u2HboHH2bvmDmIcUrMXUHZBC/xhEwYGefQVvoki6NTrWMvVXNK2m+7icmCet2f1OrRQf6W6H5H9THuqRRg==
+
+"@fontsource/lato@^4.5.8":
+  version "4.5.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-4.5.8.tgz#20acb60d0895cc82723b4999492c70b1f9816460"
+  integrity sha512-IoSvhhzHsSzJu5XEOmDqzqcSmtfcJ788nz2TDgGXac076DApUsYIPHHBd0dh9guMBIVuHZ8Y2dlXNHFl4bCyLA==
+
 "@hapi/accept@5.0.2":
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/@hapi/accept/-/accept-5.0.2.tgz#ab7043b037e68b722f93f376afb05e85c0699523"
