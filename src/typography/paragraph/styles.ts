@@ -7,6 +7,8 @@ export const sParagraph = css`
 
     font-weight: 400;
     font-size: ${font.size[16]};
+
+    line-height: ${font.height[16]};
 `
 
 export const sParagraphLight = css`
@@ -23,18 +25,26 @@ export const sParagraphBold = css`
 
 export const sParagraphXS = css`
     font-size: ${font.size[12]};
+
+    line-height: ${font.height[12]};
 `
 
 export const sParagraphS = css`
     font-size: ${font.size[14]};
+
+    line-height: ${font.height[14]};
 `
 
 export const sParagraphL = css`
     font-size: ${font.size[18]};
+
+    line-height: ${font.height[18]};
 `
 
 export const sParagraphXL = css`
     font-size: ${font.size[24]};
+
+    line-height: ${font.height[24]};
 `
 
 export const sParagraphFamilyPrimary = css`
