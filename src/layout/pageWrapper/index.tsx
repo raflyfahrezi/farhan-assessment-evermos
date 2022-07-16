@@ -1,18 +1,29 @@
 import React from 'react'
+import { cx } from '@emotion/css'
 
 import { Head } from '@/layout'
 
 import Navigation from '../navigation'
-import { sPageWrapper } from './styles'
 import { PageWrapperProps } from './types'
+import {
+    sPageWrapper,
+    sPageWrapperContent,
+    sPageWrapperContentWithPadding,
+} from './styles'
 
-const PageWrapper = ({ title, children }: PageWrapperProps) => {
+const PageWrapper = ({ title, children, withPaddingTop }: PageWrapperProps) => {
     return (
         <>
             <Head title={title} />
             <div className={sPageWrapper}>
                 <Navigation />
-                <div>{children}</div>
+                <div
+                    className={cx(sPageWrapperContent, {
+                        [sPageWrapperContentWithPadding]: withPaddingTop,
+                    })}
+                >
+                    {children}
+                </div>
             </div>
         </>
     )
