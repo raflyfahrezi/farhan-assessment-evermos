@@ -3,7 +3,7 @@ import { css } from '@emotion/css'
 import { font, color } from '@/styles'
 
 export const sParagraph = css`
-    color: ${color.darkBrown};
+    color: ${color.primary.darkBrown};
 
     font-weight: 400;
     font-size: ${font.size[16]};
