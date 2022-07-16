@@ -7,6 +7,8 @@
         "react-hooks/exhaustive-deps": "off",
         "react/jsx-props-no-spreading": "off",
         "react/jsx-filename-extension": "off",
+        "react/function-component-definition": "off",
+        "import/no-cycle": "off",
         "import/prefer-default-export": "off",
         "import/no-extraneous-dependencies": "off",
         "import/extensions": [
