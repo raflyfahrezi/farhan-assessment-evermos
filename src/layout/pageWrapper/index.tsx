@@ -3,13 +3,14 @@ import React from 'react'
 import { Head } from '@/layout'
 
 import { PageWrapperProps } from './types'
+import { sPageWrapper } from './styles'
 
 const PageWrapper = ({ title, children }: PageWrapperProps) => {
     return (
-        <div>
+        <>
             <Head title={title} />
-            <div>{children}</div>
-        </div>
+            <div className={sPageWrapper}>{children}</div>
+        </>
     )
 }
 
