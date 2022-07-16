@@ -1,7 +1,8 @@
 import { Font } from './types'
 
 const font: Font = {
-    family: 'Poppins',
+    familyPrimary: 'Lato',
+    familySecondary: '"Frank Ruhl Libre"',
     weight: {
         light: '300',
         normal: '400',

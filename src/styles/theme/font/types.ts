@@ -33,7 +33,8 @@ export interface FontHeight {
 
 export interface Font {
     size: FontSize
-    family: string
     weight: FontWeight
     height: FontHeight
+    familyPrimary: string
+    familySecondary: string
 }
