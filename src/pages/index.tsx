@@ -6,7 +6,7 @@ import { PageWrapper } from '@/layout'
 
 const index: NextPage = () => {
     return (
-        <PageWrapper title='Home'>
+        <PageWrapper title='fahsyon'>
             <HomeModule />
         </PageWrapper>
     )
