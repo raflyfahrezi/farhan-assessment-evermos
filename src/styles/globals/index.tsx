@@ -10,7 +10,7 @@ const globalCSS = css`
 
         box-sizing: border-box;
 
-        font-family: ${font.family};
+        font-family: ${font.familyPrimary};
     }
 `
 
