@@ -4,10 +4,23 @@
 import React from 'react'
 import type { AppProps } from 'next/app'
 
-import '@/styles/globals.css'
+import { Global } from '@/styles'
+
+import '@fontsource/lato/400.css'
+import '@fontsource/lato/700.css'
+import '@fontsource/lato/900.css'
+
+import '@fontsource/frank-ruhl-libre/400.css'
+import '@fontsource/frank-ruhl-libre/700.css'
+import '@fontsource/frank-ruhl-libre/900.css'
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
-    return <Component {...pageProps} />
+    return (
+        <>
+            <Global />
+            <Component {...pageProps} />
+        </>
+    )
 }
 
 export default MyApp
