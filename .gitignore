@@ -4,9 +4,6 @@
 /node_modules
 /.pnp
 .pnp.js
-yarn.lock
-yarn-error.log
-package-lock.json
 
 # testing
 /coverage
@@ -38,3 +35,5 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+yarn.lock
