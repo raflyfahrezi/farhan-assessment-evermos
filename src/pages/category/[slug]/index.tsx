@@ -19,7 +19,7 @@ interface CategoryProps {
 const category = ({ slug, productList }: CategoryProps) => {
     return (
         <PageWrapper
-            title={`${slug.toUpperCase()} Products - fahsyion`}
+            title={`${slug?.toUpperCase()} Products - fahsyion`}
             withPaddingTop
         >
             <CategoryModule title={slug} productList={productList} />
