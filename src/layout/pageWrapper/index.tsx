@@ -3,6 +3,7 @@ import { cx } from '@emotion/css'
 
 import { Head } from '@/layout'
 
+import Footer from '../footer'
 import Navigation from '../navigation'
 import { PageWrapperProps } from './types'
 import {
@@ -24,6 +25,7 @@ const PageWrapper = ({ title, children, withPaddingTop }: PageWrapperProps) => {
                 >
                     {children}
                 </div>
+                <Footer />
             </div>
         </>
     )
