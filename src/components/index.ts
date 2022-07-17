@@ -1,4 +1,5 @@
+import Link from './link'
 import Button from './button'
 import Wrapper from './wrapper'
 
-export { Button, Wrapper }
+export { Link, Button, Wrapper }
