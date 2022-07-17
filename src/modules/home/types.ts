@@ -5,3 +5,9 @@ export interface HomeProps {
     mensClothingList: Product[]
     womensClothingList: Product[]
 }
+
+export interface HomeViewsProps {
+    jewelery: Product
+    mensClothing: Product
+    womensClothing: Product
+}
