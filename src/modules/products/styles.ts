@@ -26,7 +26,8 @@ export const sProductContentList = css`
     width: 100%;
 
     display: grid;
-    gap: 20px;
+    row-gap: 80px;
+    column-gap: 30px;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 `
 
