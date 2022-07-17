@@ -32,17 +32,17 @@ const HomeModuleViews = ({
                     </div>
                     <div className={sHomeCategories}>
                         <Card
-                            link='/'
+                            link={`/category/${jewelery.category}`}
                             image={jewelery.image}
                             label='Jewelery'
                         />
                         <Card
-                            link='/'
+                            link={`/category/${mensClothing.category}`}
                             image={mensClothing.image}
                             label="Men's Clothing"
                         />
                         <Card
-                            link='/'
+                            link={`/category/${womensClothing.category}`}
                             image={womensClothing.image}
                             label="Women's Clothing"
                         />
