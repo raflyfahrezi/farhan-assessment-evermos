@@ -14,7 +14,7 @@ import {
 
 const Navigation = () => {
     return (
-        <div className={sNavigation}>
+        <nav className={sNavigation}>
             <Wrapper>
                 <div className={sNavigationWrapper}>
                     <div>
@@ -32,7 +32,7 @@ const Navigation = () => {
                     </div>
                 </div>
             </Wrapper>
-        </div>
+        </nav>
     )
 }
 
