@@ -11,6 +11,15 @@ export const sProductCard = css`
     display: flex;
     gap: 20px;
     flex-direction: column;
+    justify-content: space-between;
+`
+
+export const sProductCardContent = css`
+    width: 100%;
+
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
 `
 
 export const sProductCardImage = css`
@@ -23,4 +32,33 @@ export const sProductCardImage = css`
 
         object-fit: contain;
     }
+`
+
+export const sProductCardRating = css`
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+`
+
+export const sProductCardInfo = css`
+    width: 100%;
+    /* height: 100%; */
+
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    text-align: center;
+`
+
+export const sProductCardFooter = css`
+    width: 100%;
+
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+
+    text-align: center;
 `
