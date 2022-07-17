@@ -11,6 +11,14 @@ export const sNavigation = css`
     left: 0;
 
     z-index: 10;
+
+    transition: all 0.2s;
+`
+
+export const sNavigationScrolled = css`
+    background-color: ${color.primary.lightBrown};
+
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 `
 
 export const sNavigationWrapper = css`

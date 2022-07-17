@@ -1,38 +1,39 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-import { CartIcon } from '@/assets'
-import { Wrapper } from '@/components'
-import { Paragraph } from '@/typography'
+import { zustand } from '@/services'
 
-import {
-    sNavigation,
-    sNavigationLink,
-    sNavigationCart,
-    sNavigationWrapper,
-    sNavigationCartNumber,
-} from './styles'
+import NavigationViews from './views'
 
 const Navigation = () => {
+    const state = {
+        cart: zustand((zustandState) => zustandState.cart),
+        isNavigationScrolled: zustand(
+            (zustandState) => zustandState.isNavigationScrolled
+        ),
+        setIsNavigationScrolled: zustand(
+            (zustandState) => zustandState.setIsNavigationScrolled
+        ),
+    }
+
+    useEffect(() => {
+        const { setIsNavigationScrolled } = state
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= 10) {
+                setIsNavigationScrolled(true)
+
+                return
+            }
+
+            setIsNavigationScrolled(false)
+        })
+    }, [])
+
     return (
-        <div className={sNavigation}>
-            <Wrapper>
-                <div className={sNavigationWrapper}>
-                    <div>
-                        <Paragraph>fahsyon</Paragraph>
-                    </div>
-                    <div className={sNavigationLink}>
-                        <Paragraph weight='bold'>Home</Paragraph>
-                        <Paragraph weight='bold'>Products</Paragraph>
-                    </div>
-                    <div>
-                        <div className={sNavigationCart}>
-                            <p className={sNavigationCartNumber}>0</p>
-                            <CartIcon />
-                        </div>
-                    </div>
-                </div>
-            </Wrapper>
-        </div>
+        <NavigationViews
+            productList={state.cart}
+            isNavigationScrolled={state.isNavigationScrolled}
+        />
     )
 }
 

@@ -1,19 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-import { Wrapper } from '@/components'
+import { Product } from '@/models'
 
-import Hero from './hero'
+import { HomeProps } from './types'
+import HomeModuleViews from './views'
 
-const HomeModule = () => {
+const HomeModule = ({
+    jeweleryList,
+    mensClothingList,
+    womensClothingList,
+}: HomeProps) => {
+    const [jewelery] = useState<Product>(jeweleryList[0])
+    const [mensClothing] = useState<Product>(mensClothingList[1])
+    const [womensClothing] = useState<Product>(womensClothingList[0])
+
     return (
-        <div>
-            <Hero />
-            <Wrapper>
-                <div>
-                    <p>This is home module</p>
-                </div>
-            </Wrapper>
-        </div>
+        <HomeModuleViews
+            jewelery={jewelery}
+            mensClothing={mensClothing}
+            womensClothing={womensClothing}
+        />
     )
 }
 
