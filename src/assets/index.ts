@@ -1,3 +1,4 @@
+import StarIcon from './star'
 import CartIcon from './cart'
 
-export { CartIcon }
+export { StarIcon, CartIcon }
