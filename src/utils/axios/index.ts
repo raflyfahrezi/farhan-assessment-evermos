@@ -2,7 +2,7 @@ import axios from 'axios'
 
 import { AxiosProps } from './types'
 
-const BASE_URL = 'https://dodo-api-expressjs.herokuapp.com'
+const BASE_URL = 'https://fakestoreapi.com'
 
 export const axiosGet = (
     url: string,
