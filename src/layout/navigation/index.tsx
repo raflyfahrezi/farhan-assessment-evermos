@@ -1,44 +1,39 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-import { CartIcon } from '@/assets'
-import { Paragraph } from '@/typography'
-import { Link, Wrapper } from '@/components'
+import { zustand } from '@/services'
 
-import {
-    sNavigation,
-    sNavigationLink,
-    sNavigationCart,
-    sNavigationWrapper,
-    sNavigationCartNumber,
-} from './styles'
+import NavigationViews from './views'
 
 const Navigation = () => {
+    const state = {
+        cart: zustand((zustandState) => zustandState.cart),
+        isNavigationScrolled: zustand(
+            (zustandState) => zustandState.isNavigationScrolled
+        ),
+        setIsNavigationScrolled: zustand(
+            (zustandState) => zustandState.setIsNavigationScrolled
+        ),
+    }
+
+    useEffect(() => {
+        const { setIsNavigationScrolled } = state
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY >= 10) {
+                setIsNavigationScrolled(true)
+
+                return
+            }
+
+            setIsNavigationScrolled(false)
+        })
+    }, [])
+
     return (
-        <nav className={sNavigation}>
-            <Wrapper>
-                <div className={sNavigationWrapper}>
-                    <div>
-                        <Paragraph variant='xl' family='secondary'>
-                            fahsyon
-                        </Paragraph>
-                    </div>
-                    <div className={sNavigationLink}>
-                        <Link href='/'>
-                            <Paragraph weight='bold'>Home</Paragraph>
-                        </Link>
-                        <Link href='/products'>
-                            <Paragraph weight='bold'>Products</Paragraph>
-                        </Link>
-                    </div>
-                    <div>
-                        <div className={sNavigationCart}>
-                            <p className={sNavigationCartNumber}>0</p>
-                            <CartIcon />
-                        </div>
-                    </div>
-                </div>
-            </Wrapper>
-        </nav>
+        <NavigationViews
+            productList={state.cart}
+            isNavigationScrolled={state.isNavigationScrolled}
+        />
     )
 }
 
