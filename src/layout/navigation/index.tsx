@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { CartIcon } from '@/assets'
-import { Wrapper } from '@/components'
 import { Paragraph } from '@/typography'
+import { Link, Wrapper } from '@/components'
 
 import {
     sNavigation,
@@ -18,11 +18,17 @@ const Navigation = () => {
             <Wrapper>
                 <div className={sNavigationWrapper}>
                     <div>
-                        <Paragraph>fahsyon</Paragraph>
+                        <Paragraph variant='xl' family='secondary'>
+                            fahsyon
+                        </Paragraph>
                     </div>
                     <div className={sNavigationLink}>
-                        <Paragraph weight='bold'>Home</Paragraph>
-                        <Paragraph weight='bold'>Products</Paragraph>
+                        <Link href='/'>
+                            <Paragraph weight='bold'>Home</Paragraph>
+                        </Link>
+                        <Link href='/products'>
+                            <Paragraph weight='bold'>Products</Paragraph>
+                        </Link>
                     </div>
                     <div>
                         <div className={sNavigationCart}>
