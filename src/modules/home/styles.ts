@@ -22,6 +22,8 @@ export const sHomeHeader = css`
 
 export const sHomeHeading = css`
     font-size: ${font.size[64]};
+
+    line-height: ${font.size[64]};
 `
 
 export const sHomeCategories = css`
