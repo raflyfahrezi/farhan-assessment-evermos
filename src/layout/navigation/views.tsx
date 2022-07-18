@@ -51,12 +51,14 @@ const NavigationViews = ({
                         </Link>
                     </div>
                     <div>
-                        <div className={sNavigationCart}>
-                            <p className={sNavigationCartNumber}>
-                                {productList.length}
-                            </p>
-                            <CartIcon />
-                        </div>
+                        <Link href='/cart'>
+                            <div className={sNavigationCart}>
+                                <p className={sNavigationCartNumber}>
+                                    {productList.length}
+                                </p>
+                                <CartIcon />
+                            </div>
+                        </Link>
                     </div>
                 </div>
             </Wrapper>
