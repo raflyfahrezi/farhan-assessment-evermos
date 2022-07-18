@@ -22,6 +22,8 @@ export const sCategoryHeading = css`
     text-transform: capitalize;
 
     font-size: ${font.size[64]};
+
+    line-height: ${font.height[64]};
 `
 
 export const sCategoryContentList = css`

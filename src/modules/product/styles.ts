@@ -9,6 +9,10 @@ export const sProduct = css`
     gap: 60px;
 
     padding: 50px 0;
+
+    @media (max-width: 700px) {
+        flex-direction: column;
+    }
 `
 
 export const sProductTitle = css`
@@ -18,6 +22,10 @@ export const sProductTitle = css`
 export const sProductImageWrapper = css`
     width: 100%;
     max-width: 200px;
+
+    @media (max-width: 700px) {
+        margin: 0 auto;
+    }
 `
 
 export const sProductImage = css`
