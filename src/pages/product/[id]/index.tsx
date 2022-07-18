@@ -25,9 +25,13 @@ const product = ({ title, productItem }: ProductProps) => {
 }
 
 const getStaticPaths: GetStaticPaths = async () => {
-    const { data } = await axiosGet('/products/category/jewelery', {})
+    const jeweleryData = await axiosGet('/products/category/jewelery', {})
+    const mensData = await axiosGet("/products/category/men's clothing", {})
+    const womensData = await axiosGet("/products/category/women's clothing", {})
 
-    const paths = data.map((item: any) => {
+    const allData = [...jeweleryData.data, ...mensData.data, ...womensData.data]
+
+    const paths = allData.map((item: any) => {
         return {
             params: {
                 id: `${item?.id}`,
