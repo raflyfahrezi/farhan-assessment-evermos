@@ -59,11 +59,9 @@ const CartModuleViews = ({
                             Total: ${getTotalCartPrice(cart)}
                         </Paragraph>
                     </div>
-                    <div>
-                        <Button type='button' onClick={checkoutHandler}>
-                            Checkout
-                        </Button>
-                    </div>
+                    <Button type='button' onClick={checkoutHandler}>
+                        Checkout
+                    </Button>
                 </div>
             </div>
         </Wrapper>
