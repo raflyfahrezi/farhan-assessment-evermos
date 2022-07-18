@@ -28,4 +28,9 @@ export const sHomeCategories = css`
     display: flex;
     gap: 30px;
     justify-content: space-around;
+
+    @media (max-width: 800px) {
+        align-items: center;
+        flex-direction: column;
+    }
 `
