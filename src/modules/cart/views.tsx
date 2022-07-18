@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { zustand } from '@/services'
 import { Paragraph } from '@/typography'
 import { Wrapper, CartCard, Button } from '@/components'
 
@@ -14,11 +13,11 @@ import {
     sCartContentList,
 } from './styles'
 
-const CartModuleViews = ({ getTotalCartPrice }: CartModuleViewsProps) => {
-    const state = {
-        cart: zustand((zustandState) => zustandState.cart),
-    }
-
+const CartModuleViews = ({
+    cart,
+    getTotalCartPrice,
+    removeFromCartHandler,
+}: CartModuleViewsProps) => {
     return (
         <Wrapper>
             <div className={sCart}>
@@ -31,15 +30,19 @@ const CartModuleViews = ({ getTotalCartPrice }: CartModuleViewsProps) => {
                         Cart
                     </Paragraph>
                 </div>
-                {state.cart.length > 0 ? (
+                {cart.length > 0 ? (
                     <div className={sCartContentList}>
-                        {state.cart.map((item) => {
+                        {cart.map((item) => {
                             return (
                                 <CartCard
+                                    id={item.id}
                                     key={item.id}
                                     title={item.title}
                                     image={item.image}
                                     price={item.price}
+                                    removeFromCartHandler={() =>
+                                        removeFromCartHandler(item.id)
+                                    }
                                 />
                             )
                         })}
@@ -52,7 +55,7 @@ const CartModuleViews = ({ getTotalCartPrice }: CartModuleViewsProps) => {
                 <div className={sCartFooter}>
                     <div>
                         <Paragraph weight='bold' variant='xl'>
-                            Total: ${getTotalCartPrice(state.cart)}
+                            Total: ${getTotalCartPrice(cart)}
                         </Paragraph>
                     </div>
                     <div>

@@ -1,17 +1,34 @@
 import React from 'react'
 
-import { Product } from '@/models'
+import { zustand } from '@/services'
 
 import CartModuleViews from './views'
 
 const CartModule = () => {
-    const getTotalCartPrice = (cart: Product[]) => {
-        return cart.reduce((acc, item) => {
+    const state = {
+        cart: zustand((zustandState) => zustandState.cart),
+        setCart: zustand((zustandState) => zustandState.setCart),
+    }
+
+    const getTotalCartPrice = () => {
+        return state.cart.reduce((acc, item) => {
             return acc + item.price
         }, 0)
     }
 
-    return <CartModuleViews getTotalCartPrice={getTotalCartPrice} />
+    const removeCartItemHandler = (id: number) => {
+        const newCart = state.cart.filter((item) => item.id !== id)
+
+        state.setCart(newCart)
+    }
+
+    return (
+        <CartModuleViews
+            cart={state.cart}
+            getTotalCartPrice={getTotalCartPrice}
+            removeFromCartHandler={removeCartItemHandler}
+        />
+    )
 }
 
 export default CartModule
