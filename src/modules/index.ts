@@ -1,5 +1,6 @@
 import HomeModule from './home'
+import ProductModule from './product'
 import CategoryModule from './category'
 import ProductsModule from './products'
 
-export { HomeModule, CategoryModule, ProductsModule }
+export { HomeModule, ProductModule, CategoryModule, ProductsModule }
