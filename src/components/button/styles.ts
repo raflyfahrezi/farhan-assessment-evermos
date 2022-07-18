@@ -21,9 +21,15 @@ export const sButton = css`
 
     transition: 0.5s;
 
-    background-color: ${color.primary.darkBrown};
-
     &:active {
         transform: scale(0.95);
     }
+`
+
+export const sButtonPrimary = css`
+    background-color: ${color.primary.darkBrown};
+`
+
+export const sButtonDanger = css`
+    background-color: ${color.secondary.red};
 `

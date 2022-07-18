@@ -2,14 +2,14 @@
 
 import React from 'react'
 
+import ButtonViews from './views'
 import { ButtonProps } from './types'
-import { sButton } from './styles'
 
-const Button = ({ type, children, ...rest }: ButtonProps) => {
+const Button = ({ type, variant, children, ...rest }: ButtonProps) => {
     return (
-        <button type={type} className={sButton} {...rest}>
+        <ButtonViews type={type} variant={variant} {...rest}>
             {children}
-        </button>
+        </ButtonViews>
     )
 }
 
