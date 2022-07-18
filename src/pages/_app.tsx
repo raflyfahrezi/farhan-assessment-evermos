@@ -4,6 +4,7 @@
 import React from 'react'
 import type { AppProps } from 'next/app'
 import NextNProgress from 'nextjs-progressbar'
+import { AnimatePresence } from 'framer-motion'
 
 import { Global } from '@/styles'
 
@@ -15,11 +16,13 @@ import '@fontsource/frank-ruhl-libre/400.css'
 import '@fontsource/frank-ruhl-libre/700.css'
 import '@fontsource/frank-ruhl-libre/900.css'
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+const MyApp = ({ Component, pageProps, router }: AppProps) => {
     return (
         <>
             <Global />
-            <Component {...pageProps} />
+            <AnimatePresence exitBeforeEnter>
+                <Component {...pageProps} key={router.pathname} />
+            </AnimatePresence>
             <NextNProgress
                 height={5}
                 color='#34251F'
