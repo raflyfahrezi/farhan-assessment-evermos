@@ -31,7 +31,9 @@ const Navigation = () => {
     const responsiveRouteHandler = (path: string) => {
         setIsResponsiveNavigationOpen(false)
 
-        router.push(path)
+        setTimeout(() => {
+            router.push(path)
+        }, 500)
     }
 
     useEffect(() => {

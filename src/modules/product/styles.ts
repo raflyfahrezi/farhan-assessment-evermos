@@ -17,6 +17,8 @@ export const sProduct = css`
 
 export const sProductTitle = css`
     font-size: ${font.size[48]};
+
+    line-height: ${font.height[48]};
 `
 
 export const sProductImageWrapper = css`

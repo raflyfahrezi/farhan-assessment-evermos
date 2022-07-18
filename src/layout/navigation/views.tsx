@@ -47,7 +47,7 @@ const NavigationViews = ({
                         <div className={sNavigationLink}>
                             {Routes.map((route) => {
                                 return (
-                                    <Link href={route.path}>
+                                    <Link key={route.path} href={route.path}>
                                         <Paragraph weight='bold'>
                                             {route.label}
                                         </Paragraph>
@@ -84,6 +84,7 @@ const NavigationViews = ({
                         return (
                             <Paragraph
                                 weight='bold'
+                                key={route.path}
                                 onClick={() =>
                                     responsiveRouteHandler(route.path)
                                 }

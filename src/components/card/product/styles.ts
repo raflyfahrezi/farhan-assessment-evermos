@@ -12,6 +12,10 @@ export const sProductCard = css`
     gap: 20px;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (max-width: 470px) {
+        max-width: none;
+    }
 `
 
 export const sProductCardContent = css`
@@ -43,7 +47,6 @@ export const sProductCardRating = css`
 
 export const sProductCardInfo = css`
     width: 100%;
-    /* height: 100%; */
 
     display: flex;
     gap: 10px;
