@@ -1,3 +1,4 @@
+import CartCard from './cart'
 import ProductCard from './product'
 
-export { ProductCard }
+export { CartCard, ProductCard }
