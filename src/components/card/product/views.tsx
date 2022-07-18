@@ -36,7 +36,7 @@ const ProductCardViews = ({ product }: ProductCardViewsProps) => {
             <div className={sProductCardFooter}>
                 <Paragraph weight='bold'>${price}</Paragraph>
                 <Link href={`/product/${id}`}>
-                    <Button type='button'>Detail</Button>
+                    <Button type='button'>Details</Button>
                 </Link>
             </div>
         </div>
