@@ -6,4 +6,7 @@ export interface ProductModuleProps {
 
 export interface ProductModuleViewsProps {
     product: Product
+    addToCartHandler: () => void
+    removeFromCartHandler: () => void
+    checkIfItemExistInCart: () => boolean
 }

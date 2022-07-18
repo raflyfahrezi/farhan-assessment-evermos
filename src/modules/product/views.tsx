@@ -19,7 +19,12 @@ import {
     sProductContentGuaranteeItem,
 } from './styles'
 
-const ProductModuleViews = ({ product }: ProductModuleViewsProps) => {
+const ProductModuleViews = ({
+    product,
+    addToCartHandler,
+    removeFromCartHandler,
+    checkIfItemExistInCart,
+}: ProductModuleViewsProps) => {
     const { category, description, image, price, rating, title } = product
 
     return (
@@ -47,7 +52,19 @@ const ProductModuleViews = ({ product }: ProductModuleViewsProps) => {
                     <Paragraph variant='xl' weight='bold'>
                         ${price}
                     </Paragraph>
-                    <Button type='button'>Add to Cart</Button>
+                    {checkIfItemExistInCart() ? (
+                        <Button
+                            type='button'
+                            variant='danger'
+                            onClick={removeFromCartHandler}
+                        >
+                            Remove from Cart
+                        </Button>
+                    ) : (
+                        <Button type='button' onClick={addToCartHandler}>
+                            Add to Cart
+                        </Button>
+                    )}
                     <div className={sProductContentGuarantee}>
                         <div className={sProductContentGuaranteeItem}>
                             <div className={sProductContentGuaranteeIcon}>
