@@ -15,6 +15,7 @@ import {
 
 const CartModuleViews = ({
     cart,
+    checkoutHandler,
     getTotalCartPrice,
     removeFromCartHandler,
 }: CartModuleViewsProps) => {
@@ -59,7 +60,9 @@ const CartModuleViews = ({
                         </Paragraph>
                     </div>
                     <div>
-                        <Button type='button'>Checkout</Button>
+                        <Button type='button' onClick={checkoutHandler}>
+                            Checkout
+                        </Button>
                     </div>
                 </div>
             </div>

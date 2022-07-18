@@ -22,9 +22,14 @@ const CartModule = () => {
         state.setCart(newCart)
     }
 
+    const checkoutHandler = () => {
+        state.setCart([])
+    }
+
     return (
         <CartModuleViews
             cart={state.cart}
+            checkoutHandler={checkoutHandler}
             getTotalCartPrice={getTotalCartPrice}
             removeFromCartHandler={removeCartItemHandler}
         />
