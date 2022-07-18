@@ -8,6 +8,7 @@ import Navigation from '../navigation'
 import { PageWrapperProps } from './types'
 import {
     sPageWrapper,
+    sPageWrapperWrapper,
     sPageWrapperContent,
     sPageWrapperContentWithPadding,
 } from './styles'
@@ -17,13 +18,15 @@ const PageWrapper = ({ title, children, withPaddingTop }: PageWrapperProps) => {
         <>
             <Head title={title} />
             <div className={sPageWrapper}>
-                <Navigation />
-                <div
-                    className={cx(sPageWrapperContent, {
-                        [sPageWrapperContentWithPadding]: withPaddingTop,
-                    })}
-                >
-                    {children}
+                <div className={sPageWrapperWrapper}>
+                    <Navigation />
+                    <div
+                        className={cx(sPageWrapperContent, {
+                            [sPageWrapperContentWithPadding]: withPaddingTop,
+                        })}
+                    >
+                        {children}
+                    </div>
                 </div>
                 <Footer />
             </div>
