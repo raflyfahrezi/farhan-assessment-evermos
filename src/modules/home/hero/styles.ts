@@ -46,6 +46,10 @@ export const sHeroContent = css`
 
     display: flex;
     gap: 100px;
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+    }
 `
 
 export const sHeroImageWrapper = css`
