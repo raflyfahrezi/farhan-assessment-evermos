@@ -3,6 +3,7 @@
 
 import React from 'react'
 import type { AppProps } from 'next/app'
+import NextNProgress from 'nextjs-progressbar'
 
 import { Global } from '@/styles'
 
@@ -19,6 +20,12 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <>
             <Global />
             <Component {...pageProps} />
+            <NextNProgress
+                height={5}
+                color='#34251F'
+                stopDelayMs={200}
+                options={{ showSpinner: false, easing: 'ease', speed: 500 }}
+            />
         </>
     )
 }
