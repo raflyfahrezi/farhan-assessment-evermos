@@ -24,6 +24,10 @@ export const sCard = css`
     &:hover {
         transform: scale(1.1);
     }
+
+    @media (max-width: 800px) {
+        max-width: 100%;
+    }
 `
 
 export const sCardWrapper = css`
